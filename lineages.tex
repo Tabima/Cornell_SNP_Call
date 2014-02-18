@@ -84,11 +84,11 @@
 
 % insert the table of contents
 \tableofcontents
+\listoffigures
+\listoftables
 
 \newpage
 
-%\listoffigures
-%\listoftables
 %\newpage
 
 %% ---------- ---------- ---------- Section ---------- ---------- ---------- %%
@@ -99,7 +99,8 @@ The sample includes data which was opportunistically gathered from previous publ
 
 \vspace{12pt}
 
-\begin{tabular}{ l c r }
+\begin{center}
+\begin{tabular}{ l c c }
   \hline
   Sample & Count & Reference \\
   \hline
@@ -113,12 +114,13 @@ The sample includes data which was opportunistically gathered from previous publ
   Total & 28 & \\
   \hline
 \end{tabular}
+\end{center}
 
 \vspace{12pt}
 
-Note that both the Yoshida and Martin papers \cite{yoshida2013correction, martin2013reconstructing} included ancient DNA in their analyses.  Here we have omitted those samples and focused on modern samples.  The sample 'T30-4' was the first sequenced genome and is considered the reference for nuclear work.  This genome was assembled prior to high-throughput sequencing (i.e., Illumina and 454 technologies).  The data presented here are not the sequences used for the paper but are part of a project by the Broad (\url{http://www.broadinstitute.org/annotation/genome/phytophthora_infestans/MultiHome.html}) to resequence this sample using Illumina and 454 technologies.
+Note that both the Yoshida and Martin papers \cite{yoshida2013correction, martin2013reconstructing} included ancient DNA in their analyses.  Here we have omitted those samples and focused on modern samples.  The sample `T30-4' was the first sequenced genome and is considered the reference for nuclear work.  This genome was assembled prior to high-throughput sequencing (i.e., Illumina and 454 technologies).  The data presented here are not the sequences used for the paper but are part of a project by the Broad (\url{http://www.broadinstitute.org/annotation/genome/phytophthora_infestans/MultiHome.html}) to resequence this sample using Illumina and 454 technologies.
 
-The Judelson data include a sample of US1 which was sampled at three different time points (us1\_1, us1\_2 and us1\_3).  We suspect that this was different samples and not necessarily the same clone.  Therefore differences among these samples may either be due to biological or technical factors.  It also includes a sample of US8 which has been characterized as having fungicide resistance \cite{danies2013phenotypic}.  This lineage was also sequenced by Martin et al. \cite{martin2013reconstructing}.  These are most likely different samples so differences among these samples may be interpreted as biological.
+The Judelson data include a sample of US1 which was sampled at three different time points (us1\_1, us1\_2 and us1\_3).  We suspect that these were different samples and not necessarily the same clone.  Therefore differences among these samples may either be due to biological or technical factors.  It also includes a sample of US8 which has been characterized as having fungicide resistance \cite{danies2013phenotypic}.  This lineage was also sequenced by Martin et al. \cite{martin2013reconstructing}.  These are most likely different samples so differences among these samples may be interpreted as biological.
 
 The Yoshida data includes one sample of \emph{P. mirabilis} (p7722), this should jump out in the analyses.
 
@@ -131,9 +133,9 @@ For enigmatic reasons, not all of the samples from the Yoshida and Martin papers
 
 \section{Read mapping}
 
-Mapped reads to the type IIa mitochondrial reference \href{http://www.ncbi.nlm.nih.gov/nuccore/AY898627.1}{"AY898627.1"}.  Reads were mapped using bowtie2 \cite{langmead2012fast}, called variants, again using the type IIa mitochondrial reference (but a different format).  SAMtools was used to call variants \cite{li2009sequence}.
+Reads were mapped to the type IIa mitochondrial reference \href{http://www.ncbi.nlm.nih.gov/nuccore/AY898627.1}{"AY898627.1"}.  Reads were mapped using bowtie2 \cite{langmead2012fast}.  Variants were called using SAMtools\cite{li2009sequence}.
 
-\subsection{Preprocessing}
+\subsection{Variant filtering}
 To check which of the calls are good calls, the variant files were filtered by quality, read depth and mapping quality (Figure \ref{fig:plot_filter}). For this we used an in-house R package Brian wrote called \href{https://github.com/knausb/vcfR}{vcfR}. The results of these statistics for the whole mitochondria can be seen in Figure \ref{fig:chromogc}. Note that quality here is for each individual call and ranges from 1-99.  This is different from the per variant quality discussed above which ranges from 1-999.  Most of these heterozygous sites are of low quality.
 The samples which included high quality heterozygote calls (p1362, p6096, p10650, p12204, p10127) were mostly from the Yoshida et al. \cite{yoshida2013correction} paper and were among the low sequencing depth samples they included.  Because these samples are not among the US lineages we're interested in and because they are apparently of low sequencing depth I think we can ignore them for now.  However, the sample nl07434 was among the high sequencing depth samples from this paper and is perhaps noteworthy.  T30-4 was called as a heterozygote for one variant and is perplexinng.
 
@@ -141,7 +143,20 @@ The samples which included high quality heterozygote calls (p1362, p6096, p10650
 
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H!]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h!]
+
+\includegraphics[width=\maxwidth]{figure/plot_unfilter} \caption[Quality results for the mtDNA SNP calls before filtering]{Quality results for the mtDNA SNP calls before filtering.\label{fig:plot_unfilter}}
+\end{figure}
+
+
+\end{knitrout}
+
+
+
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h!]
 
 \includegraphics[width=\maxwidth]{figure/plot_filter} \caption[Quality results for the mtDNA SNP calls after filtering]{Quality results for the mtDNA SNP calls after filtering.\label{fig:plot_filter}}
 \end{figure}
@@ -164,13 +179,7 @@ The samples which included high quality heterozygote calls (p1362, p6096, p10650
 
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-  Chromo
-  Wide rows   (brows):  5 
-  Narrow rows (srows):  2 
-\end{verbatim}
-\end{kframe}\begin{figure}[h!]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h!]
 
 \includegraphics[width=\maxwidth]{figure/chromogc} \caption[Whole mtDNA genome scan for the P]{Whole mtDNA genome scan for the P. infestans samples.\label{fig:chromogc}}
 \end{figure}
@@ -232,10 +241,15 @@ To map the SNP's found in the mtDNA genome to the coalescent tree, we used \text
 \end{alltt}
 \begin{verbatim}
 ## R version 3.0.2 (2013-09-25)
-## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## Platform: x86_64-pc-linux-gnu (64-bit)
 ## 
 ## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
@@ -245,7 +259,7 @@ To map the SNP's found in the mtDNA genome to the coalescent tree, we used \text
 ## 
 ## loaded via a namespace (and not attached):
 ## [1] ape_3.0-11      evaluate_0.5.1  formatR_0.10    grid_3.0.2     
-## [5] lattice_0.20-23 nlme_3.1-111    stringr_0.6.2   tools_3.0.2
+## [5] lattice_0.20-24 nlme_3.1-111    stringr_0.6.2   tools_3.0.2
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
