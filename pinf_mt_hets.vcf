@@ -1,0 +1,31 @@
+##fileformat=VCFv4.1
+##samtoolsVersion=0.1.18 (r982:295)
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="# high-quality ref-forward bases, ref-reverse, alt-forward and alt-reverse bases">
+##INFO=<ID=MQ,Number=1,Type=Integer,Description="Root-mean-square mapping quality of covering reads">
+##INFO=<ID=FQ,Number=1,Type=Float,Description="Phred probability of all samples being the same">
+##INFO=<ID=AF1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele frequency (assuming HWE)">
+##INFO=<ID=AC1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele count (no HWE assumption)">
+##INFO=<ID=G3,Number=3,Type=Float,Description="ML estimate of genotype frequencies">
+##INFO=<ID=HWE,Number=1,Type=Float,Description="Chi^2 based HWE test P-value based on G3">
+##INFO=<ID=CLR,Number=1,Type=Integer,Description="Log ratio of genotype likelihoods with and without the constraint">
+##INFO=<ID=UGT,Number=1,Type=String,Description="The most probable unconstrained genotype configuration in the trio">
+##INFO=<ID=CGT,Number=1,Type=String,Description="The most probable constrained genotype configuration in the trio">
+##INFO=<ID=PV4,Number=4,Type=Float,Description="P-values for strand bias, baseQ bias, mapQ bias and tail distance bias">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=PC2,Number=2,Type=Integer,Description="Phred probability of the nonRef allele frequency in group1 samples being larger (,smaller) than in group2.">
+##INFO=<ID=PCHI2,Number=1,Type=Float,Description="Posterior weighted chi^2 P-value for testing the association between group1 and group2 samples.">
+##INFO=<ID=QCHI2,Number=1,Type=Integer,Description="Phred scaled PCHI2.">
+##INFO=<ID=PR,Number=1,Type=Integer,Description="# permutations yielding a smaller PCHI2.">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GL,Number=3,Type=Float,Description="Likelihoods for RR,RA,AA genotypes (R=ref,A=alt)">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="# high-quality bases">
+##FORMAT=<ID=SP,Number=1,Type=Integer,Description="Phred-scaled strand bias P-value">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	X13_a2	X90128	pic99189	t30.4	us1_1	us1_3	us22	us23	us24	us8	ddr7602	lbus5	nl07434	p10127	p10650	p11633	p12204	p13527	p13626	p1362	p17777	p6096	p7722	BL2009P4_us23	IN2009T1_us22	RS2009P1_us8	us11	us1_2
+Supercontig_1.1	1140	.	A	T	999	.	DP=7405;VDB=0.0357;AF1=0.5471;G3=0.3722,0.1657,0.4621;HWE=0.000372;AC1=31;DP4=1613,1200,983,465;MQ=43;FQ=999;PV4=2e-11,0,1,1	GT:PL:GQ	1/1:254,255,0:99	1/1:30,161,0:32	1/1:108,7,0:6	0/1:113,0,138:99	0/0:0,255,255:99	0/0:0,255,255:99	1/1:111,131,0:99	1/1:78,117,0:80	1/1:92,85,0:82	1/1:126,138,0:99	1/1:171,141,0:99	1/1:160,196,0:99	0/0:0,255,255:99	0/0:0,255,255:99	0/1:53,0,44:46	0/0:0,255,255:99	0/1:31,0,26:27	0/0:0,255,255:99	0/0:0,255,255:99	0/1:5,0,67:9	1/1:231,255,0:99	0/1:28,0,54:32	0/0:0,255,255:99	1/1:104,255,0:99	1/1:95,225,0:97	1/1:124,255,0:99	0/0:0,255,255:99	0/0:0,255,255:99
+Supercontig_1.1	14930	.	A	C	999	.	DP=7820;VDB=0.0322;AF1=0.01786;AC1=1;DP4=5360,2209,71,66;MQ=44;FQ=999;PV4=4.2e-06,1.7e-43,0.32,1	GT:PL:GQ	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/1:254,0,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99
+Supercontig_1.1	22813	.	C	A	999	.	DP=7275;VDB=0.0435;AF1=0.575;G3=0.3571,0.1164,0.5265;HWE=4.05e-05;AC1=32;DP4=1861,917,2527,910;MQ=44;FQ=999;PV4=2.1e-08,0,1,1	GT:PL:GQ	1/1:255,255,0:99	1/1:255,255,0:99	1/1:213,255,0:99	1/1:152,255,0:99	0/0:0,255,255:99	0/0:0,255,255:99	1/1:255,255,0:99	1/1:255,255,0:99	1/1:255,255,0:99	1/1:255,255,0:99	1/1:255,255,0:99	1/1:255,255,0:99	0/0:0,255,255:99	0/0:0,255,255:99	0/1:158,0,150:99	0/0:0,255,255:99	0/1:143,0,5:8	0/0:0,255,255:99	0/0:0,255,255:99	0/1:173,0,14:16	1/1:255,255,0:99	0/1:142,0,150:99	0/0:0,255,255:99	1/1:255,255,0:99	1/1:255,255,0:99	1/1:255,255,0:99	0/0:0,255,255:99	0/0:0,255,255:99
+Supercontig_1.1	24914	.	att	aTtt	999	.	INDEL;DP=5054;VDB=0.0539;AF1=0.05784;AC1=3;DP4=3783,810,19,20;MQ=43;FQ=999;PV4=2.1e-06,1,0,1	GT:PL:GQ	0/0:0,120,213:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,208,255:99	0/0:0,255,255:99	0/0:0,187,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/1:94,0,233:85	0/1:41,0,189:32	0/0:0,12,118:21	0/0:0,23,255:32	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,0,0:10	0/0:0,160,255:99	0/1:112,0,143:99	0/0:0,0,0:10	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99	0/0:0,255,255:99

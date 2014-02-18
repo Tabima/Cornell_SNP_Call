@@ -1,0 +1,208 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{pdfpages}
+
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    urlcolor=blue           % color of external links
+}
+
+% Comments begin with a percent.
+% define the title
+\author{Brian J. Knaus, Javier F. Tabima and Niklaus J. Gr\"{u}nwald}
+\title{Mitochondrial molecular markers for US lineages of \emph{P. infestans}}
+
+% Begin the document.
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+
+% generates the title
+\maketitle
+\newpage
+
+% Abstract
+%\begin{abstract}
+%Morphometric analysis of \emph{Carex minicaulis}.
+%\vspace{8pt}
+%Keywords: \emph{Carex}; Morphometrics; Taxonomy.
+%\end{abstract}
+%\pagebreak
+
+% insert the table of contents
+\tableofcontents
+
+\newpage
+
+%\listoffigures
+%\listoftables
+%\newpage
+
+%% ---------- ---------- ---------- Section ---------- ---------- ---------- %%
+
+\section{Samples}
+
+The sample includes data which was opportunistically gathered from previous publications as well as data which is not yet available to the public (Judelson, unpublished).
+
+\vspace{12pt}
+
+\begin{tabular}{ l c r }
+  \hline
+  Sample & Count & Reference \\
+  \hline
+  T30-4 & 1 & \cite{haas2009genome} \\
+  PIC99189 \& 90128 & 2 & \cite{raffaele2010analyses} \\
+  13\_a2 & 1 & \cite{cooke2012genome} \\
+  Yoshida et al. & 13 & \cite{yoshida2013correction} \\
+  Martin et al. & 3 & \cite{martin2013reconstructing} \\
+  Judelson & 8 & NA \\
+  \hline
+  Total & 28 & \\
+  \hline
+\end{tabular}
+
+\vspace{12pt}
+
+Note that both the Yoshida and Martin papers \cite{yoshida2013correction, martin2013reconstructing} included ancient DNA in their analyses.  Here we have omitted those samples and focused on modern samples.  The sample 'T30-4' was the first sequenced genome and is considered the reference for nuclear work.  This genome was assembled prior to high-throughput sequencing (i.e., Illumina and 454 technologies).  The data presented here are not the sequences used for the paper but are part of a project by the Broad (\url{http://www.broadinstitute.org/annotation/genome/phytophthora_infestans/MultiHome.html}) to resequence this sample using Illumina and 454 technologies.
+
+The Judelson data include a sample of US1 which was sampled at three different time points (us1\_1, us1\_2 and us1\_3).  We suspect that this was different samples and not necessarily the same clone.  Therefore differences among these samples may either be due to biological or technical factors.  It also includes a sample of US8 which has been characterized as having fungicide resistance \cite{danies2013phenotypic}.  This lineage was also sequenced by Martin et al. \cite{martin2013reconstructing}.  These are most likely different samples so differences among these samples may be interpreted as biological.
+
+The Yoshida data includes one sample of \emph{P. mirabilis} (p7722), this should jump out in the analyses.
+
+For the mitochondrial data we used the type IIa form \cite{avila2006mitochondrial} because it was the longest sequence and we felt this would provide the best alignment.
+
+For enigmatic reasons, not all of the samples from the Yoshida and Martin papers were actually available online.  Therefore our numbers here do not match those presented in the papers.
+
+
+%% ---------- ---------- ---------- Section ---------- ---------- ---------- %%
+
+\section{Read mapping}
+
+Mapped reads to the type IIa mitochondrial reference \href{http://www.ncbi.nlm.nih.gov/nuccore/AY898627.1}{"AY898627.1"}.  Reads were mapped using bowtie2 \cite{langmead2012fast}, called variants, again using the type IIa mitochondrial reference (but a different format).  SAMtools was used to call variants \cite{li2009sequence}.
+
+\subsection{Preprocessing}
+To check which of the calls are good calls, the variant files were filtered by quality, read depth and mapping quality (Figure \ref{fig:plot_filter}). For this we used an in-house R package Brian wrote called \href{https://github.com/knausb/vcfR}{vcfR}. The results of these statistics for the whole mitochondria can be seen in Figure \ref{fig:chromogc}. Note that quality here is for each individual call and ranges from 1-99.  This is different from the per variant quality discussed above which ranges from 1-999.  Most of these heterozygous sites are of low quality.
+The samples which included high quality heterozygote calls (p1362, p6096, p10650, p12204, p10127) were mostly from the Yoshida et al. \cite{yoshida2013correction} paper and were among the low sequencing depth samples they included.  Because these samples are not among the US lineages we're interested in and because they are apparently of low sequencing depth I think we can ignore them for now.  However, the sample nl07434 was among the high sequencing depth samples from this paper and is perhaps noteworthy.  T30-4 was called as a heterozygote for one variant and is perplexinng.
+
+<<vcfContruct, echo=FALSE>>=
+library(vcfR)
+data(vcfR_example)
+mt <- read.vcf('pinf_1.raw.vcf.gz')
+pinf_mt <- create.chrom('pinf_mt', seq=pinf_dna, vcf=mt, ann=pinf_gff)
+@
+
+<<echo=FALSE, plot_filter, comment='', fig.lp="fig:", fig.cap = "Quality results for the mtDNA SNP calls after filtering.", fig.pos='H!'>>=
+pinf_mt <- masker(pinf_mt)
+plot(pinf_mt)
+@
+
+<<chromR, echo=FALSE>>=
+cat("Before filtering:")
+length(pinf_mt@mask)
+# After filter
+cat("After filtering:")
+sum(pinf_mt@mask)
+#
+# These are mitochondria, so they should be haploid.
+# Let's make sure.
+#gt <- t(apply(pinf_mt@vcf.gt, MARGIN=1, function(x){unlist(lapply(strsplit(as.character(x), ":"), function(x){x[1]}))}))
+
+get.gt1 <- function(x, element="GT"){
+  FORMAT <- unlist(strsplit(as.character(x[1]), ":"))
+  x <- x[-1]
+  pos <- grep(element, FORMAT)
+  unlist(lapply(strsplit(as.character(x), ":"), function(x){x[pos]}))
+}
+get.gt <- function(x, element="GT"){
+  gt <- t(apply(x@vcf.gt, MARGIN=1,get.gt1, element=element))
+  colnames(gt) <- names(x@vcf.gt)[-1]
+  gt
+}
+gt <- get.gt(pinf_mt, element="GT")
+gq <- get.gt(pinf_mt, element="GQ")
+#
+# Validate we got the genotypes correctly.
+#gt <- gt[,-1]
+gt[gt=="0/0"] <- 0
+gt[gt=="0/1"] <- 1
+gt[gt=="1/1"] <- 2
+#
+gt.m <- matrix(ncol=ncol(gt), nrow=nrow(gt))
+gq.m <- matrix(ncol=ncol(gt), nrow=nrow(gt))
+for(i in 1:ncol(gt)){
+  gt.m[,i] <- as.numeric(gt[,i])
+  gq.m[,i] <- as.numeric(gq[,i])
+}
+colnames(gt.m) <- colnames(gt)
+colnames(gq.m) <- colnames(gq)
+pinf_mt@mask[rowSums(apply(gt.m, MARGIN=2, function(x){x==1})) != 0] <- FALSE
+#sum(pinf_mt@mask)
+#
+pinf_mt <- proc.chrom(pinf_mt,verbose=FALSE)
+@
+
+<<echo=FALSE, comment='', chromogc, fig.lp="fig:", fig.cap = "Whole mtDNA genome scan for the P. infestans samples.",  fig.pos='h!'>>=
+chromoqc(pinf_mt)
+@
+
+
+\section{SNPs after filtering}
+
+After filtering we proceeded to look at which of the SNP's were supported after the filtering (Table \ref{table:DiagSNP}).
+
+\begin{table}[h!]
+\centering
+\caption{Diagnostic SNP positions for the mtDNA genome after filtering.}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Position & SNP & Diagnostic for       \\ \midrule
+7857     & A/G & p10127, us11 and us1 \\
+8118     & T/G & us1                  \\
+20464    & T/C & p17777, us22 and us8 \\
+22711    & G/A & p17777, us22 and us8 \\
+26767    & A/G & p10127, us11 and us1 \\
+28783    & A/G & p10127, us11 and us1 \\
+36663    & T/C & us8                  \\ \bottomrule
+\end{tabular}
+\label{table:DiagSNP}
+\end{table}
+
+\section{Diagnostic SNP mapping} 
+\subsection{Phylogenetic reconstruction}
+Using the whole genome alignment (28 sequences, 39870 nucleotides) we performed a whole-genome phylogeny using likelihood (RAxML) and bayesian inference (BEAST). We used RAxML using no partitions, 1000 bootstrap replicates, a GTR+I+G model of nucleotide evolution to obtain a bipartitioned tree with the boostrap values mapped to the branches. For BEAST, we specified \texttt{p7722} (\emph{P.mirabilis}) as the outgroup. We used a \texttt{HKY+G+I} model of nucleotide substitutions, a strict molecular clock, a constant population size prior, UPGMA starting tree and 10 million markov Chains. The best tree is shown in Figure \ref{fig:BEAST}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.3]{Beast_branchlenghts.jpg}
+\caption[BEAST Coalescent tree]{Bayesian coalescent of the whole mtDNA genome of \emph{P.infestans} using \texttt{BEAST 1.8.0}. Values above branches represent branch lenghts (Tolopogy is cooncordant to the bifurcating model of a coalescent recosntruction). Branch colors represent posterior probability values (Legend indicates color coding).}
+\label{fig:BEAST}
+\end{figure}
+
+\subsection{Mapping the SNP's in the BEAST tree}
+
+To map the SNP's found in the mtDNA genome to the coalescent tree, we used \texttt{Mesquite}. We did a removal of invariable regions and ancestral State reconstruction for all 31 SNPs using a parsimony reconstruction state (Figure \ref{fig:SNP_Trace}).
+
+\includepdf[pages={-}, nup=2x2]{All_traces.pdf}
+
+
+\vspace{24pt}
+
+%% ---------- ---------- ---------- Section ---------- ---------- ---------- %%
+
+\section{Session Information}
+
+<<sesinf>>=
+sessionInfo()
+@
+
+%% ---------- ---------- ---------- Section ---------- ---------- ---------- %%
+
+\bibliographystyle{plain}
+\bibliography{lineages.bib}
+
+%% ---------- ---------- ---------- Section ---------- ---------- ---------- %%
+
+\end{document}
