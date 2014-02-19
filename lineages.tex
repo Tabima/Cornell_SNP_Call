@@ -143,7 +143,7 @@ The samples which included high quality heterozygote calls (p1362, p6096, p10650
 
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h!]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[p]
 
 \includegraphics[width=\maxwidth]{figure/plot_unfilter} \caption[Quality results for the mtDNA SNP calls before filtering]{Quality results for the mtDNA SNP calls before filtering.\label{fig:plot_unfilter}}
 \end{figure}
@@ -156,7 +156,7 @@ The samples which included high quality heterozygote calls (p1362, p6096, p10650
 
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h!]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[p]
 
 \includegraphics[width=\maxwidth]{figure/plot_filter} \caption[Quality results for the mtDNA SNP calls after filtering]{Quality results for the mtDNA SNP calls after filtering.\label{fig:plot_filter}}
 \end{figure}
@@ -179,7 +179,7 @@ The samples which included high quality heterozygote calls (p1362, p6096, p10650
 
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h!]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[p]
 
 \includegraphics[width=\maxwidth]{figure/chromogc} \caption[Whole mtDNA genome scan for the P]{Whole mtDNA genome scan for the P. infestans samples.\label{fig:chromogc}}
 \end{figure}
@@ -214,7 +214,7 @@ Position & SNP & Diagnostic for       \\ \midrule
 \subsection{Phylogenetic reconstruction}
 Using the whole genome alignment (28 sequences, 39870 nucleotides) we performed a whole-genome phylogeny using likelihood (RAxML) and bayesian inference (BEAST). We used RAxML using no partitions, 1000 bootstrap replicates, a GTR+I+G model of nucleotide evolution to obtain a bipartitioned tree with the boostrap values mapped to the branches. For BEAST, we specified \texttt{p7722} (\emph{P.mirabilis}) as the outgroup. We used a \texttt{HKY+G+I} model of nucleotide substitutions, a strict molecular clock, a constant population size prior, UPGMA starting tree and 10 million markov Chains. The best tree is shown in Figure \ref{fig:BEAST}.
 
-\begin{figure}[h!]
+\begin{figure}[p]
 \centering
 \includegraphics[scale=0.3]{Beast_branchlenghts.jpg}
 \caption[BEAST Coalescent tree]{Bayesian coalescent of the whole mtDNA genome of \emph{P.infestans} using \texttt{BEAST 1.8.0}. Values above branches represent branch lenghts (Tolopogy is cooncordant to the bifurcating model of a coalescent recosntruction). Branch colors represent posterior probability values (Legend indicates color coding).}
@@ -224,7 +224,7 @@ Using the whole genome alignment (28 sequences, 39870 nucleotides) we performed 
 \subsection{Mapping the SNP's in the BEAST tree}
 
 To map the SNP's found in the mtDNA genome to the coalescent tree, we used \texttt{Mesquite}. We did a removal of invariable regions and ancestral State reconstruction for all 31 SNPs using a parsimony reconstruction state (Figure \ref{fig:SNP_Trace}).
-
+\newpage
 \includepdf[pages={-}, nup=2x2]{All_traces.pdf}
 
 
@@ -241,15 +241,10 @@ To map the SNP's found in the mtDNA genome to the coalescent tree, we used \text
 \end{alltt}
 \begin{verbatim}
 ## R version 3.0.2 (2013-09-25)
-## Platform: x86_64-pc-linux-gnu (64-bit)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
 ## 
 ## locale:
-##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
-##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
-##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
-##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
-##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
@@ -259,7 +254,7 @@ To map the SNP's found in the mtDNA genome to the coalescent tree, we used \text
 ## 
 ## loaded via a namespace (and not attached):
 ## [1] ape_3.0-11      evaluate_0.5.1  formatR_0.10    grid_3.0.2     
-## [5] lattice_0.20-24 nlme_3.1-111    stringr_0.6.2   tools_3.0.2
+## [5] lattice_0.20-23 nlme_3.1-111    stringr_0.6.2   tools_3.0.2
 \end{verbatim}
 \end{kframe}
 \end{knitrout}

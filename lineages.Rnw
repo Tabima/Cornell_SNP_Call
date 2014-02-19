@@ -96,7 +96,7 @@ mt <- read.vcf('pinf_1.raw.vcf.gz')
 pinf_mt <- create.chrom('pinf_mt', seq=pinf_dna, vcf=mt, ann=pinf_gff)
 @
 
-<<echo=FALSE, plot_unfilter, comment='', fig.lp="fig:", fig.cap = "Quality results for the mtDNA SNP calls before filtering.", fig.pos='h!'>>=
+<<echo=FALSE, plot_unfilter, comment='', fig.lp="fig:", fig.cap = "Quality results for the mtDNA SNP calls before filtering.", fig.pos='p'>>=
 plot(pinf_mt)
 @
 
@@ -105,7 +105,7 @@ pinf_mt <- masker(pinf_mt)
 pinf_mt <- proc.chrom(pinf_mt)
 @
 
-<<echo=FALSE, plot_filter, comment='', fig.lp="fig:", fig.cap = "Quality results for the mtDNA SNP calls after filtering.", fig.pos='h!'>>=
+<<echo=FALSE, plot_filter, comment='', fig.lp="fig:", fig.cap = "Quality results for the mtDNA SNP calls after filtering.", fig.pos='p'>>=
 plot(pinf_mt)
 @
 
@@ -154,7 +154,7 @@ pinf_mt@mask[rowSums(apply(gt.m, MARGIN=2, function(x){x==1})) != 0] <- FALSE
 pinf_mt <- proc.chrom(pinf_mt,verbose=FALSE)
 @
 
-<<echo=FALSE, comment='', chromogc, fig.lp="fig:", fig.cap = "Whole mtDNA genome scan for the P. infestans samples.",  fig.pos='h!', results='hide'>>=
+<<echo=FALSE, comment='', chromogc, fig.lp="fig:", fig.cap = "Whole mtDNA genome scan for the P. infestans samples.",  fig.pos='p', results='hide'>>=
 chromoqc(pinf_mt)
 @
 
@@ -184,7 +184,7 @@ Position & SNP & Diagnostic for       \\ \midrule
 \subsection{Phylogenetic reconstruction}
 Using the whole genome alignment (28 sequences, 39870 nucleotides) we performed a whole-genome phylogeny using likelihood (RAxML) and bayesian inference (BEAST). We used RAxML using no partitions, 1000 bootstrap replicates, a GTR+I+G model of nucleotide evolution to obtain a bipartitioned tree with the boostrap values mapped to the branches. For BEAST, we specified \texttt{p7722} (\emph{P.mirabilis}) as the outgroup. We used a \texttt{HKY+G+I} model of nucleotide substitutions, a strict molecular clock, a constant population size prior, UPGMA starting tree and 10 million markov Chains. The best tree is shown in Figure \ref{fig:BEAST}.
 
-\begin{figure}[h!]
+\begin{figure}[p]
 \centering
 \includegraphics[scale=0.3]{Beast_branchlenghts.jpg}
 \caption[BEAST Coalescent tree]{Bayesian coalescent of the whole mtDNA genome of \emph{P.infestans} using \texttt{BEAST 1.8.0}. Values above branches represent branch lenghts (Tolopogy is cooncordant to the bifurcating model of a coalescent recosntruction). Branch colors represent posterior probability values (Legend indicates color coding).}
@@ -194,7 +194,7 @@ Using the whole genome alignment (28 sequences, 39870 nucleotides) we performed 
 \subsection{Mapping the SNP's in the BEAST tree}
 
 To map the SNP's found in the mtDNA genome to the coalescent tree, we used \texttt{Mesquite}. We did a removal of invariable regions and ancestral State reconstruction for all 31 SNPs using a parsimony reconstruction state (Figure \ref{fig:SNP_Trace}).
-
+\newpage
 \includepdf[pages={-}, nup=2x2]{All_traces.pdf}
 
 

@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {2}Read mapping}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Variant filtering}{4}{subsection.2.1}
 \contentsline {section}{\numberline {3}SNPs after filtering}{4}{section.3}
-\contentsline {section}{\numberline {4}Diagnostic SNP mapping}{5}{section.4}
-\contentsline {subsection}{\numberline {4.1}Phylogenetic reconstruction}{5}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Mapping the SNP's in the BEAST tree}{6}{subsection.4.2}
-\contentsline {section}{\numberline {5}Session Information}{16}{section.5}
+\contentsline {section}{\numberline {4}Diagnostic SNP mapping}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Phylogenetic reconstruction}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Mapping the SNP's in the BEAST tree}{8}{subsection.4.2}
+\contentsline {section}{\numberline {5}Session Information}{19}{section.5}
