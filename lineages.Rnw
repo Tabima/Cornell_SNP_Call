@@ -5,6 +5,7 @@
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{pdfpages}
+\usepackage{lineno}
 
 \hypersetup{
     colorlinks=true,       % false: boxed links; true: colored links
@@ -43,6 +44,8 @@
 
 %% ---------- ---------- ---------- Section ---------- ---------- ---------- %%
 
+\linenumbers
+
 \section{Samples}
 
 The sample includes data which was opportunistically gathered from previous publications as well as data which is not yet available to the public (Judelson, unpublished).
@@ -68,16 +71,25 @@ The sample includes data which was opportunistically gathered from previous publ
 
 \vspace{12pt}
 
-Note that both the Yoshida and Martin papers \cite{yoshida2013correction, martin2013reconstructing} included ancient DNA in their analyses.  Here we have omitted those samples and focused on modern samples.  The sample `T30-4' was the first sequenced genome and is considered the reference for nuclear work.  This genome was assembled prior to high-throughput sequencing (i.e., Illumina and 454 technologies).  The data presented here are not the sequences used for the paper but are part of a project by the Broad (\url{http://www.broadinstitute.org/annotation/genome/phytophthora_infestans/MultiHome.html}) to resequence this sample using Illumina and 454 technologies.
+\begin{itemize}
 
-The Judelson data include a sample of US1 which was sampled at three different time points (us1\_1, us1\_2 and us1\_3).  We suspect that these were different samples and not necessarily the same clone.  Therefore differences among these samples may either be due to biological or technical factors.  It also includes a sample of US8 which has been characterized as having fungicide resistance \cite{danies2013phenotypic}.  This lineage was also sequenced by Martin et al. \cite{martin2013reconstructing}.  These are most likely different samples so differences among these samples may be interpreted as biological.
+\item The sample `T30-4' was the first sequenced genome and is considered the reference for nuclear work \cite{haas2009genome}.  This genome was assembled prior to high-throughput sequencing (i.e., Illumina and 454 technologies).  The data presented here are not the sequences used for the paper but are part of a project by \href{http://www.broadinstitute.org/annotation/genome/phytophthora_infestans/MultiHome.html}{The Broad} to resequence this sample using Illumina and 454 technologies.
 
-The Yoshida data includes one sample of \emph{P. mirabilis} (p7722), this should jump out in the analyses.
+\item Note that both the Yoshida and Martin papers included ancient DNA in their analyses \cite{yoshida2013correction, martin2013reconstructing}.  Here we have omitted those samples and focused on modern samples.
 
-For the mitochondrial data we used the type IIa form \cite{avila2006mitochondrial} because it was the longest sequence and we felt this would provide the best alignment.
+\item For enigmatic reasons, not all of the samples from the Yoshida and Martin papers were actually available online.  Therefore our numbers here do not match those presented in the papers.  
 
-For enigmatic reasons, not all of the samples from the Yoshida and Martin papers were actually available online.  Therefore our numbers here do not match those presented in the papers.
+\item The Judelson data include a sample of US1 which was sampled at three different time points (us1\_1, us1\_2 and us1\_3).  We suspect that these were different samples and not necessarily the same clone.  Therefore differences among these samples may either be due to biological or technical factors.
 
+\item The Judelson data includes a sample of US8 which has been characterized as having fungicide resistance \cite{danies2013phenotypic}.  This lineage was also sequenced by Martin et al. \cite{martin2013reconstructing}.  These are most likely different samples so differences among these samples may be interpreted as biological.  
+  
+\item The Yoshida data includes one sample of \emph{P. mirabilis} (p7722), this should jump out in the analyses.
+
+\item For the mitochondrial data we used the type IIa form \cite{avila2006mitochondrial} because it was the longest sequence and we felt this would provide the best alignment.
+
+\end{itemize}
+
+We've used the term `SNP' fairly loosely in this document.  The term `variant' may be more appropriate.  Until fairly recently the software tools we've been using could only handle SNPs.  They now report short indels as well.
 
 %% ---------- ---------- ---------- Section ---------- ---------- ---------- %%
 
@@ -86,8 +98,12 @@ For enigmatic reasons, not all of the samples from the Yoshida and Martin papers
 Reads were mapped to the type IIa mitochondrial reference \href{http://www.ncbi.nlm.nih.gov/nuccore/AY898627.1}{"AY898627.1"}.  Reads were mapped using bowtie2 \cite{langmead2012fast}.  Variants were called using SAMtools\cite{li2009sequence}.
 
 \subsection{Variant filtering}
-To check which of the calls are good calls, the variant files were filtered by quality, read depth and mapping quality (Figure \ref{fig:plot_filter}). For this we used an in-house R package Brian wrote called \href{https://github.com/knausb/vcfR}{vcfR}. The results of these statistics for the whole mitochondria can be seen in Figure \ref{fig:chromogc}. Note that quality here is for each individual call and ranges from 1-99.  This is different from the per variant quality discussed above which ranges from 1-999.  Most of these heterozygous sites are of low quality.
-The samples which included high quality heterozygote calls (p1362, p6096, p10650, p12204, p10127) were mostly from the Yoshida et al. \cite{yoshida2013correction} paper and were among the low sequencing depth samples they included.  Because these samples are not among the US lineages we're interested in and because they are apparently of low sequencing depth I think we can ignore them for now.  However, the sample nl07434 was among the high sequencing depth samples from this paper and is perhaps noteworthy.  T30-4 was called as a heterozygote for one variant and is perplexinng.
+To check which of the calls are good calls, the variant files were filtered by quality, read depth and mapping quality (Figures \ref{fig:plot_unfilter},\ref{fig:plot_filter}). For this we used an in-house R package called \href{https://github.com/knausb/vcfR}{vcfR}. Sequencing depth is cumulative over all sampels.  Quality here is for each variant over all samples and ranges from 1-999.
+
+The genotype caller in Samtools assumes a diploid, bi-allelic model.  Because mitochondrial are assumed to be haploid we tried to filter out heterozygous calls.  Samples which included high quality heterozygote calls (p1362, p6096, p10650, p12204, p10127) were mostly from the Yoshida et al. \cite{yoshida2013correction} paper and were among the low sequencing depth samples they included.  Because these samples are not among the US lineages we're interested in, and because they are apparently of low sequencing depth, we omitted them for now.  However, the sample nl07434 was among the high sequencing depth samples from this paper and is perhaps noteworthy.  T30-4 was called as a heterozygote for one variant and is perplexinng.
+
+The variants remaining after filtering were visualized as a linear chromosome in Figure \ref{fig:chromogc}.
+
 
 <<vcfContruct, echo=FALSE, results='hide'>>=
 library(vcfR)
@@ -105,7 +121,7 @@ pinf_mt <- masker(pinf_mt)
 pinf_mt <- proc.chrom(pinf_mt)
 @
 
-<<echo=FALSE, plot_filter, comment='', fig.lp="fig:", fig.cap = "Quality results for the mtDNA SNP calls after filtering.", fig.pos='p'>>=
+<<echo=FALSE, plot_filter, comment='', fig.lp="fig:", fig.cap = "Quality results for the mtDNA SNP calls after filtering and windowizing variants.", fig.pos='p'>>=
 plot(pinf_mt)
 @
 
@@ -152,16 +168,37 @@ pinf_mt@mask[rowSums(apply(gt.m, MARGIN=2, function(x){x==1})) != 0] <- FALSE
 #sum(pinf_mt@mask)
 #
 pinf_mt <- proc.chrom(pinf_mt,verbose=FALSE)
+#
+write.vcf(pinf_mt, "pinf_mt_masked.vcf")
 @
+
+<<echo=FALSE, variants, results='asis'>>=
+#library(knitr)
+#kable(pinf_mt@vcf.fix[pinf_mt@mask,c(1,2,4,5)])
+#kable(pinf_mt@vcf.fix[1:4,c(1,2,4,5)])
+#kable(head(iris))
+#
+library(xtable)
+ptab <- xtable(cbind(pinf_mt@vcf.fix[pinf_mt@mask,c(1,2,4,5)],1:sum(pinf_mt@mask)))
+colnames(ptab)[5] <- "Tree character"
+align(ptab) <- 'llcccc'
+caption(ptab) <- "Variants remaining after filtering."
+label(ptab) <- "ptab"
+digits(ptab)[3] <- 0
+ptab
+@
+
 
 <<echo=FALSE, comment='', chromogc, fig.lp="fig:", fig.cap = "Whole mtDNA genome scan for the P. infestans samples.",  fig.pos='p', results='hide'>>=
 chromoqc(pinf_mt)
 @
 
 
-\section{SNPs after filtering}
+%\section{SNPs after filtering}
 
-After filtering we proceeded to look at which of the SNP's were supported after the filtering (Table \ref{table:DiagSNP}).
+Filtering the variant panel based on quality (QUAL=999), cumulative sequencing depth (1st quartile >= DP >= 3rd quartile) and mapping quality (1st quartile >= MQ >= 3rd quartile) resulted in 37 variants (Table \ref{ptab}).  We have identified a fraction of these as being diagnostic for a small group of samples (Table \ref{table:DiagSNP}).
+
+%After filtering we proceeded to look at which of the SNP's were supported after the filtering (Table \ref{table:DiagSNP}).
 
 \begin{table}[h!]
 \centering
@@ -180,20 +217,26 @@ Position & SNP & Diagnostic for       \\ \midrule
 \label{table:DiagSNP}
 \end{table}
 
-\section{Diagnostic SNP mapping} 
+%% ---------- ---------- ---------- Section ---------- ---------- ---------- %%
+
+\section{Variant segregation}
+%\section{Diagnostic SNP mapping}
+
+In order to visualize how variants segregated among the samples, a phylogeny was inferred.  We then used ancestral state reconstruction to map the characters to the tree.  At this time we're not trying to say anything bold about phylogeny or character evolution.  We're simply using these tools to visualize how the variants segregate.
+
 \subsection{Phylogenetic reconstruction}
-Using the whole genome alignment (28 sequences, 39870 nucleotides) we performed a whole-genome phylogeny using likelihood (RAxML) and bayesian inference (BEAST). We used RAxML using no partitions, 1000 bootstrap replicates, a GTR+I+G model of nucleotide evolution to obtain a bipartitioned tree with the boostrap values mapped to the branches. For BEAST, we specified \texttt{p7722} (\emph{P.mirabilis}) as the outgroup. We used a \texttt{HKY+G+I} model of nucleotide substitutions, a strict molecular clock, a constant population size prior, UPGMA starting tree and 10 million markov Chains. The best tree is shown in Figure \ref{fig:BEAST}.
+Using the whole genome alignment (28 sequences, 39,870 nucleotides) we performed a whole-genome phylogeny using maximum likelihood (RAxML) and Bayesian inference (BEAST). We used RAxML using no partitions, 1000 bootstrap replicates, a \texttt{GTR+I+G} model of nucleotide evolution to obtain a bipartitioned tree with the boostrap values mapped to the branches. For BEAST, we specified \texttt{p7722} (\emph{P.mirabilis}) as the outgroup. We used a \texttt{HKY+G+I} model of nucleotide substitutions, a strict molecular clock, a constant population size prior, UPGMA starting tree and 10 million Markov Chains. The best tree is shown in Figure \ref{fig:BEAST}.
 
 \begin{figure}[p]
 \centering
 \includegraphics[scale=0.3]{Beast_branchlenghts.jpg}
-\caption[BEAST Coalescent tree]{Bayesian coalescent of the whole mtDNA genome of \emph{P.infestans} using \texttt{BEAST 1.8.0}. Values above branches represent branch lenghts (Tolopogy is cooncordant to the bifurcating model of a coalescent recosntruction). Branch colors represent posterior probability values (Legend indicates color coding).}
+\caption[BEAST Coalescent tree]{Bayesian coalescent tree of the whole mtDNA genome of \emph{P.infestans} using \texttt{BEAST 1.8.0}. Values above branches represent branch lengths (tolopogy is cooncordant to the bifurcating model of a coalescent recosntruction). Branches are colored based on their posterior probability values (legend indicates values).}
 \label{fig:BEAST}
 \end{figure}
 
 \subsection{Mapping the SNP's in the BEAST tree}
 
-To map the SNP's found in the mtDNA genome to the coalescent tree, we used \texttt{Mesquite}. We did a removal of invariable regions and ancestral State reconstruction for all 31 SNPs using a parsimony reconstruction state (Figure \ref{fig:SNP_Trace}).
+To map the variants found in the mtDNA genome to the coalescent tree, we used \texttt{Mesquite}. We did a removal of invariable regions and ancestral state reconstruction for all 31 SNPs using a parsimony reconstruction state (Figure \ref{fig:SNP_Trace}).
 \newpage
 \includepdf[pages={-}, nup=2x2]{All_traces.pdf}
 
