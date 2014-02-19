@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.8.6)  19 FEB 2014 13:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.8.6)  19 FEB 2014 14:32
 entering extended mode
  %&-line parsing enabled.
 **lineages.tex
@@ -274,9 +274,243 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframebox=\box32
 LaTeX Info: Redefining \\ on input line 3056.
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 62.
+(/usr/share/texmf-texlive/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2009/08/01 .dtx Todonotes source and documentation.
+Package: todonotes 2009/04/02
 
-(/usr/share/texmf-texlive/tex/latex/upquote/upquote.sty
+(/usr/share/texmf-texlive/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(/usr/share/texmf-texlive/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks19
+\XKV@tempa@toks=\toks20
+\XKV@depth=\count115
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+))
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks21
+)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2008/02/20 v2.00 (rcs-revision 1.21)
+))
+Package: pgf 2008/01/15 v2.00 (rcs-revision 1.12)
+
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2008/02/07 v2.00 (rcs-revision 1.31)
+
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks22
+\pgfkeys@temptoks=\toks23
+)
+\pgf@x=\dimen133
+\pgf@y=\dimen134
+\pgf@xa=\dimen135
+\pgf@ya=\dimen136
+\pgf@xb=\dimen137
+\pgf@yb=\dimen138
+\pgf@xc=\dimen139
+\pgf@yc=\dimen140
+\c@pgf@counta=\count116
+\c@pgf@countb=\count117
+\c@pgf@countc=\count118
+\c@pgf@countd=\count119
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/01/13  (rcs-revision 1.6)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 885.
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2007/12/20  (rcs-revision 1.20)
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2007/12/17  (rcs-revision 1.8)
+)))
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/01/23  (rcs-revision 1.6)
+\pgfsyssoftpath@smallbuffer@items=\count120
+\pgfsyssoftpath@bigbuffer@items=\count121
+)
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2008/01/15 v2.00 (rcs-revision 1.6)
+
+(/usr/share/texmf/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex
+\pgfmath@box=\box33
+)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@stack=\toks24
+\c@pgfmath@parsecounta=\count122
+\c@pgfmath@parsecountb=\count123
+\c@pgfmath@parsecountc=\count124
+\pgfmath@parsex=\dimen141
+)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathoperations.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathtrig.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathrnd.code.tex))
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathbase.code.tex)))
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2008/02/03  (rcs-revision 1.13)
+\pgf@picminx=\dimen142
+\pgf@picmaxx=\dimen143
+\pgf@picminy=\dimen144
+\pgf@picmaxy=\dimen145
+\pgf@pathminx=\dimen146
+\pgf@pathmaxx=\dimen147
+\pgf@pathminy=\dimen148
+\pgf@pathmaxy=\dimen149
+\pgf@xx=\dimen150
+\pgf@xy=\dimen151
+\pgf@yx=\dimen152
+\pgf@yy=\dimen153
+\pgf@zx=\dimen154
+\pgf@zy=\dimen155
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2008/02/13  (rcs-revision 1.14)
+\pgf@path@lastx=\dimen156
+\pgf@path@lasty=\dimen157
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2008/01/23  (rcs-revision 1.11)
+\pgf@shorten@end@additional=\dimen158
+\pgf@shorten@start@additional=\dimen159
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2008/01/15  (rcs-revision 1.26)
+\pgfpic=\box34
+\pgf@hbox=\box35
+\pgf@layerbox@main=\box36
+\pgf@picture@serial@count=\count125
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2007/12/12  (rcs-revision 1.8)
+\pgflinewidth=\dimen160
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2008/02/04  (rcs-revision 1.10)
+\pgf@pt@x=\dimen161
+\pgf@pt@y=\dimen162
+\pgf@pt@temp=\dimen163
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/01/23  (rcs-revision 1.7)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2007/06/07  (rcs-revision 1.8)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2007/12/10  (rcs-revision 1.9)
+\pgf@max=\dimen164
+\pgf@sys@shading@range@num=\count126
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgfexternal@startupbox=\box37
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2008/01/15  (rcs-revision 1.1)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2008/01/15  (rcs-revision 1.1)
+)))
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2008/02/13  (rcs-revision 1.4)
+\pgfnodeparttextbox=\box38
+\toks@savedmacro=\toks25
+)
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgf@plotwrite=\write3
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.00 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen165
+\pgf@nodesepend=\dimen166
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.00 (rcs-revision 1.1)
+))
+(/usr/share/texmf/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2007/11/07 v2.00 (rcs-revision 1.8)
+\pgffor@iter=\dimen167
+\pgffor@skip=\dimen168
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2008/02/13 v2.00 (rcs-revision 1.27)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2007/03/09 v2.00 (rcs-revision 1.9)
+\pgf@plot@mark@count=\count127
+\pgfplotmarksize=\dimen169
+)
+\tikz@lastx=\dimen170
+\tikz@lasty=\dimen171
+\tikz@lastxsaved=\dimen172
+\tikz@lastysaved=\dimen173
+\tikzleveldistance=\dimen174
+\tikzsiblingdistance=\dimen175
+\tikz@figbox=\box39
+\tikz@tempbox=\box40
+\tikztreelevel=\count128
+\tikznumberofchildren=\count129
+\tikznumberofcurrentchild=\count130
+\tikz@fig@count=\count131
+
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgfmatrixcurrentrow=\count132
+\pgfmatrixcurrentcolumn=\count133
+\pgf@matrix@numberofcolumns=\count134
+)
+\tikz@expandcount=\count135
+
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
+hs.code.tex
+File: tikzlibrarytopaths.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+)))
+\c@@todonotes@numberoftodonotes=\count136
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 63.
+ (/usr/share/texmf-texlive/tex/latex/upquote/upquote.sty
 Package: upquote 2003/08/11 v1.1 Covington's upright-quote modification to verb
 atim and verb
 
@@ -349,65 +583,65 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
 )) (./lineages.aux)
 \openout1 = `lineages.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 72.
 
 (/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    ... okay on input line 72.
 
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count115
-\scratchdimen=\dimen133
-\scratchbox=\box33
-\nofMPsegments=\count116
-\nofMParguments=\count117
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count118
-\MPscratchDim=\dimen134
-\MPnumerator=\count119
-\everyMPtoPDFconversion=\toks20
+\scratchcounter=\count137
+\scratchdimen=\dimen176
+\scratchbox=\box41
+\nofMPsegments=\count138
+\nofMParguments=\count139
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count140
+\MPscratchDim=\dimen177
+\MPnumerator=\count141
+\everyMPtoPDFconversion=\toks27
 )
-Package hyperref Info: Link coloring ON on input line 71.
+Package hyperref Info: Link coloring ON on input line 72.
  (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count120
+\c@section@level=\count142
 )
-LaTeX Info: Redefining \ref on input line 71.
-LaTeX Info: Redefining \pageref on input line 71.
+LaTeX Info: Redefining \ref on input line 72.
+LaTeX Info: Redefining \pageref on input line 72.
  (./lineages.out)
 (./lineages.out)
-\@outlinefile=\write3
-\openout3 = `lineages.out'.
+\@outlinefile=\write4
+\openout4 = `lineages.out'.
 
-\AtBeginShipoutBox=\box34
+\AtBeginShipoutBox=\box42
  ABD: EveryShipout initializing macros
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 76.
+(Font)              <12> on input line 77.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 76.
+(Font)              <8> on input line 77.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 76.
+(Font)              <6> on input line 77.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./lineages.toc
@@ -416,67 +650,77 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
 )
-\tf@toc=\write4
-\openout4 = `lineages.toc'.
+\tf@toc=\write5
+\openout5 = `lineages.toc'.
 
  (./lineages.lof)
-\tf@lof=\write5
-\openout5 = `lineages.lof'.
+\tf@lof=\write6
+\openout6 = `lineages.lof'.
 
 
 (./lineages.lot)
-\tf@lot=\write6
-\openout6 = `lineages.lot'.
+\tf@lot=\write7
+\openout7 = `lineages.lot'.
 
  [2]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 99.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 100.
+
  (/usr/share/texmf-texlive/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 [3]
-Package color Info: Redefining color shadecolor on input line 162.
- <figure/plot_unfilter.pdf, id=103, 505.89pt x 505.89pt>
+
+Package xcolor Warning: Incompatible color definition on input line 163.
+
+<figure/plot_unfilter.pdf, id=106, 505.89pt x 505.89pt>
 File: figure/plot_unfilter.pdf Graphic file (type pdf)
 
 <use figure/plot_unfilter.pdf>
-Package color Info: Redefining color shadecolor on input line 175.
 
-<figure/plot_filter.pdf, id=104, 505.89pt x 505.89pt>
+Package xcolor Warning: Incompatible color definition on input line 176.
+
+<figure/plot_filter.pdf, id=107, 505.89pt x 505.89pt>
 File: figure/plot_filter.pdf Graphic file (type pdf)
 
 <use figure/plot_filter.pdf>
-Package color Info: Redefining color shadecolor on input line 185.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 186.
 
- (/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
+Package xcolor Warning: Incompatible color definition on input line 186.
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 187.
+
+(/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (14.81863pt too wide) in paragraph at lines 201--244
+Overfull \hbox (14.81863pt too wide) in paragraph at lines 202--245
  [][] 
  []
 
-Package color Info: Redefining color shadecolor on input line 252.
-<figure/chromogc.pdf, id=105, 505.89pt x 505.89pt>
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+<figure/chromogc.pdf, id=108, 505.89pt x 505.89pt>
 File: figure/chromogc.pdf Graphic file (type pdf)
  <use figure/chromogc.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [4] [5 <./figure/plot_unfilter.pdf>] [6 <./figure/plot_filter.pdf>] [7 <./figur
-e/chromogc.pdf>] <Beast_branchlenghts.jpg, id=152, 1262.7978pt x 892.2936pt>
+e/chromogc.pdf>] <Beast_branchlenghts.jpg, id=155, 1262.7978pt x 892.2936pt>
 File: Beast_branchlenghts.jpg Graphic file (type jpg)
 
 <use Beast_branchlenghts.jpg>
-Overfull \hbox (33.84227pt too wide) in paragraph at lines 297--298
+Overfull \hbox (33.84227pt too wide) in paragraph at lines 298--299
  [][] 
  []
 
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 301.
 
-LaTeX Warning: Reference `fig:SNP_Trace' on page 8 undefined on input line 304.
+LaTeX Warning: Reference `fig:SNP_Trace' on page 8 undefined on input line 307.
 
 
 [8] [9 <./Beast_branchlenghts.jpg>]
-<All_traces.pdf, id=163, page=1, 614.295pt x 794.97pt>
+<All_traces.pdf, id=169, page=1, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 1>
@@ -487,19 +731,19 @@ File: All_traces.pdf Graphic file (type pdf)
 <use All_traces.pdf, page 1>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 1>
-<All_traces.pdf, id=164, page=2, 614.295pt x 794.97pt>
+<All_traces.pdf, id=170, page=2, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 2>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 2>
-<All_traces.pdf, id=165, page=3, 614.295pt x 794.97pt>
+<All_traces.pdf, id=171, page=3, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 3>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 3>
-<All_traces.pdf, id=166, page=4, 614.295pt x 794.97pt>
+<All_traces.pdf, id=172, page=4, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 4>
@@ -516,25 +760,25 @@ File: All_traces.pdf Graphic file (type pdf)
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 4> [10 <./All_traces.pdf> <./All_traces.pdf> <./All_
 traces.pdf> <./All_traces.pdf>]
-<All_traces.pdf, id=202, page=5, 614.295pt x 794.97pt>
+<All_traces.pdf, id=208, page=5, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 5>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 5>
-<All_traces.pdf, id=203, page=6, 614.295pt x 794.97pt>
+<All_traces.pdf, id=209, page=6, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 6>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 6>
-<All_traces.pdf, id=204, page=7, 614.295pt x 794.97pt>
+<All_traces.pdf, id=210, page=7, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 7>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 7>
-<All_traces.pdf, id=205, page=8, 614.295pt x 794.97pt>
+<All_traces.pdf, id=211, page=8, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 8>
@@ -551,25 +795,25 @@ File: All_traces.pdf Graphic file (type pdf)
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 8> [11 <./All_traces.pdf> <./All_traces.pdf> <./All_
 traces.pdf> <./All_traces.pdf>]
-<All_traces.pdf, id=226, page=9, 614.295pt x 794.97pt>
+<All_traces.pdf, id=232, page=9, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 9>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 9>
-<All_traces.pdf, id=227, page=10, 614.295pt x 794.97pt>
+<All_traces.pdf, id=233, page=10, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 10>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 10>
-<All_traces.pdf, id=228, page=11, 614.295pt x 794.97pt>
+<All_traces.pdf, id=234, page=11, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 11>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 11>
-<All_traces.pdf, id=229, page=12, 614.295pt x 794.97pt>
+<All_traces.pdf, id=235, page=12, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 12>
@@ -586,25 +830,25 @@ File: All_traces.pdf Graphic file (type pdf)
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 12> [12 <./All_traces.pdf> <./All_traces.pdf> <./All
 _traces.pdf> <./All_traces.pdf>]
-<All_traces.pdf, id=250, page=13, 614.295pt x 794.97pt>
+<All_traces.pdf, id=256, page=13, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 13>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 13>
-<All_traces.pdf, id=251, page=14, 614.295pt x 794.97pt>
+<All_traces.pdf, id=257, page=14, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 14>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 14>
-<All_traces.pdf, id=252, page=15, 614.295pt x 794.97pt>
+<All_traces.pdf, id=258, page=15, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 15>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 15>
-<All_traces.pdf, id=253, page=16, 614.295pt x 794.97pt>
+<All_traces.pdf, id=259, page=16, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 16>
@@ -621,25 +865,25 @@ File: All_traces.pdf Graphic file (type pdf)
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 16> [13 <./All_traces.pdf> <./All_traces.pdf> <./All
 _traces.pdf> <./All_traces.pdf>]
-<All_traces.pdf, id=275, page=17, 614.295pt x 794.97pt>
+<All_traces.pdf, id=281, page=17, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 17>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 17>
-<All_traces.pdf, id=276, page=18, 614.295pt x 794.97pt>
+<All_traces.pdf, id=282, page=18, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 18>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 18>
-<All_traces.pdf, id=277, page=19, 614.295pt x 794.97pt>
+<All_traces.pdf, id=283, page=19, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 19>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 19>
-<All_traces.pdf, id=278, page=20, 614.295pt x 794.97pt>
+<All_traces.pdf, id=284, page=20, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 20>
@@ -656,25 +900,25 @@ File: All_traces.pdf Graphic file (type pdf)
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 20> [14 <./All_traces.pdf> <./All_traces.pdf> <./All
 _traces.pdf> <./All_traces.pdf>]
-<All_traces.pdf, id=299, page=21, 614.295pt x 794.97pt>
+<All_traces.pdf, id=305, page=21, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 21>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 21>
-<All_traces.pdf, id=300, page=22, 614.295pt x 794.97pt>
+<All_traces.pdf, id=306, page=22, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 22>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 22>
-<All_traces.pdf, id=301, page=23, 614.295pt x 794.97pt>
+<All_traces.pdf, id=307, page=23, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 23>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 23>
-<All_traces.pdf, id=302, page=24, 614.295pt x 794.97pt>
+<All_traces.pdf, id=308, page=24, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 24>
@@ -691,25 +935,25 @@ File: All_traces.pdf Graphic file (type pdf)
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 24> [15 <./All_traces.pdf> <./All_traces.pdf> <./All
 _traces.pdf> <./All_traces.pdf>]
-<All_traces.pdf, id=323, page=25, 614.295pt x 794.97pt>
+<All_traces.pdf, id=329, page=25, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 25>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 25>
-<All_traces.pdf, id=324, page=26, 614.295pt x 794.97pt>
+<All_traces.pdf, id=330, page=26, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 26>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 26>
-<All_traces.pdf, id=325, page=27, 614.295pt x 794.97pt>
+<All_traces.pdf, id=331, page=27, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 27>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 27>
-<All_traces.pdf, id=326, page=28, 614.295pt x 794.97pt>
+<All_traces.pdf, id=332, page=28, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 28>
@@ -726,25 +970,25 @@ File: All_traces.pdf Graphic file (type pdf)
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 28> [16 <./All_traces.pdf> <./All_traces.pdf> <./All
 _traces.pdf> <./All_traces.pdf>]
-<All_traces.pdf, id=347, page=29, 614.295pt x 794.97pt>
+<All_traces.pdf, id=353, page=29, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 29>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 29>
-<All_traces.pdf, id=348, page=30, 614.295pt x 794.97pt>
+<All_traces.pdf, id=354, page=30, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 30>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 30>
-<All_traces.pdf, id=349, page=31, 614.295pt x 794.97pt>
+<All_traces.pdf, id=355, page=31, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 31>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 31>
-<All_traces.pdf, id=350, page=32, 614.295pt x 794.97pt>
+<All_traces.pdf, id=356, page=32, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 32>
@@ -761,25 +1005,25 @@ File: All_traces.pdf Graphic file (type pdf)
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 32> [17 <./All_traces.pdf> <./All_traces.pdf> <./All
 _traces.pdf> <./All_traces.pdf>]
-<All_traces.pdf, id=371, page=33, 614.295pt x 794.97pt>
+<All_traces.pdf, id=377, page=33, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 33>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 33>
-<All_traces.pdf, id=372, page=34, 614.295pt x 794.97pt>
+<All_traces.pdf, id=378, page=34, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 34>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 34>
-<All_traces.pdf, id=373, page=35, 614.295pt x 794.97pt>
+<All_traces.pdf, id=379, page=35, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 35>
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 35>
-<All_traces.pdf, id=374, page=36, 614.295pt x 794.97pt>
+<All_traces.pdf, id=380, page=36, 614.295pt x 794.97pt>
 File: All_traces.pdf Graphic file (type pdf)
 
 <use All_traces.pdf, page 36>
@@ -796,17 +1040,19 @@ File: All_traces.pdf Graphic file (type pdf)
 File: All_traces.pdf Graphic file (type pdf)
  <use All_traces.pdf, page 36> [18 <./All_traces.pdf> <./All_traces.pdf> <./All
 _traces.pdf> <./All_traces.pdf>]
-Package color Info: Redefining color shadecolor on input line 316.
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 318.
 
-Overfull \hbox (27.659pt too wide) in paragraph at lines 341--341
+Package xcolor Warning: Incompatible color definition on input line 323.
+
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 325.
+
+Overfull \hbox (27.659pt too wide) in paragraph at lines 348--348
 []\T1/cmtt/m/n/10 ## [1] stats     graphics  grDevices utils     datasets  meth
 ods   base[] 
  []
 
 
-Overfull \hbox (1.4154pt too wide) in paragraph at lines 341--341
+Overfull \hbox (1.4154pt too wide) in paragraph at lines 348--348
 []\T1/cmtt/m/n/10 ## [5] lattice_0.20-24 nlme_3.1-111    stringr_0.6.2   tools_
 3.0.2[] 
  []
@@ -817,13 +1063,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6150 strings out of 495061
- 90623 string characters out of 1182622
- 169759 words of memory out of 3000000
- 9151 multiletter control sequences out of 15000+50000
+ 12778 strings out of 495061
+ 213138 string characters out of 1182622
+ 288754 words of memory out of 3000000
+ 15599 multiletter control sequences out of 15000+50000
  15328 words of font info for 36 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 38i,16n,37p,772b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 54i,16n,78p,772b,788s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/likewise-open/USDA-ARS/knausb/.texmf-var/fonts/pk/ljfour/jknappen/ec/
 ectt1000.600pk> </home/likewise-open/USDA-ARS/knausb/.texmf-var/fonts/pk/ljfour
 /jknappen/ec/ecbx1200.600pk> </home/likewise-open/USDA-ARS/knausb/.texmf-var/fo
@@ -837,9 +1083,9 @@ jknappen/ec/ecrm1000.600pk> </home/likewise-open/USDA-ARS/knausb/.texmf-var/fon
 ts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/likewise-open/USDA-ARS/knausb/.
 texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1728.600pk> </home/likewise-open/USDA
 -ARS/knausb/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on lineages.pdf (22 pages, 1795971 bytes).
+Output written on lineages.pdf (22 pages, 1801148 bytes).
 PDF statistics:
- 788 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 267 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 802 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 279 words of extra memory for PDF output out of 10000 (max. 10000000)
 

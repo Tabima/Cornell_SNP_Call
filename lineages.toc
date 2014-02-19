@@ -1,5 +1,5 @@
-\contentsline {section}{\numberline {1}Samples}{3}{section.1}
-\contentsline {section}{\numberline {2}Read mapping}{4}{section.2}
+\contentsline {section}{\numberline {1}The sample}{3}{section.1}
+\contentsline {section}{\numberline {2}Variant discovery}{4}{section.2}
 \contentsline {subsection}{\numberline {2.1}Variant filtering}{4}{subsection.2.1}
 \contentsline {section}{\numberline {3}Variant segregation}{4}{section.3}
 \contentsline {subsection}{\numberline {3.1}Phylogenetic reconstruction}{8}{subsection.3.1}
