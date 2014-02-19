@@ -196,7 +196,7 @@ The variants remaining after filtering were visualized as a linear chromosome in
 
 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Wed Feb 19 14:32:27 2014
+% Wed Feb 19 15:17:35 2014
 \begin{table}[ht]
 \centering
 \begin{tabular}{llcccc}
@@ -295,16 +295,14 @@ Using the whole genome alignment (28 sequences, 39,870 nucleotides) we performed
 
 \begin{figure}[p]
 \centering
-\includegraphics[scale=0.3]{Beast_branchlenghts.jpg}
-\caption[BEAST Coalescent tree]{Bayesian coalescent tree of the whole mtDNA genome of \emph{P.infestans} using \texttt{BEAST 1.8.0}. Values above branches represent branch lengths (tolopogy is cooncordant to the bifurcating model of a coalescent recosntruction). Branches are colored based on their posterior probability values (legend indicates color scheme).}
+\includegraphics[scale=0.08]{Beast_branchlenghts.jpg}
+\caption[BEAST Coalescent tree]{Bayesian coalescent tree of the whole mtDNA genome of \emph{P.infestans} using \texttt{BEAST 1.8.0}. Values above branches represent branch lengths (tolopogy is cooncordant to the bifurcating model of a coalescent reconstruction). Branches are colored based on their posterior probability values (legend indicates color scheme).}
 \label{fig:BEAST}
-\todo[inline]{Why is there a scale bar in subs/site when the tree is ultrametric?}
-\todo[inline, backgroundcolor=blue!20!white]{If the branch lengths are zero how does it affect inference of topology?}
 \end{figure}
 
 \subsection{Mapping the SNP's in the BEAST tree}
 
-To map the variants found in the mtDNA genome to the coalescent tree, we used \texttt{Mesquite}. We did a removal of invariable regions and ancestral state reconstruction for all \todo{Why isn't this 37?}31 SNPs using a parsimony reconstruction state (Figure \ref{fig:SNP_Trace}).
+To map the variants found in the mtDNA genome to the coalescent tree, we used \texttt{Mesquite}. We did a removal of invariable regions and ancestral state reconstruction for all 37 SNPs using a parsimony reconstruction state (Figure \ref{fig:SNP_Trace}).
 
 \newpage
 
@@ -326,15 +324,10 @@ To map the variants found in the mtDNA genome to the coalescent tree, we used \t
 \end{alltt}
 \begin{verbatim}
 ## R version 3.0.2 (2013-09-25)
-## Platform: x86_64-pc-linux-gnu (64-bit)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
 ## 
 ## locale:
-##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
-##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
-##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
-##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
-##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
@@ -344,7 +337,7 @@ To map the variants found in the mtDNA genome to the coalescent tree, we used \t
 ## 
 ## loaded via a namespace (and not attached):
 ## [1] ape_3.0-11      evaluate_0.5.1  formatR_0.10    grid_3.0.2     
-## [5] lattice_0.20-24 nlme_3.1-111    stringr_0.6.2   tools_3.0.2
+## [5] lattice_0.20-23 nlme_3.1-111    stringr_0.6.2   tools_3.0.2
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
