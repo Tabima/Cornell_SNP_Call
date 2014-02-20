@@ -250,7 +250,7 @@ To map the variants found in the mtDNA genome to the coalescent tree, we used \t
 
 %% ---------- ---------- ---------- Section ---------- ---------- ---------- %%
 
-\section{Session Information}
+\section{Session information}
 
 <<sesinf>>=
 sessionInfo()
