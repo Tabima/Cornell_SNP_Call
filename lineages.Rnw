@@ -181,7 +181,7 @@ sum(pinf_mt@mask)
 #
 library(xtable)
 ptab <- xtable(cbind(pinf_mt@vcf.fix[pinf_mt@mask,c(1,2,4,5)],1:sum(pinf_mt@mask)))
-colnames(ptab)[5] <- "Tree character"
+colnames(ptab)[5] <- "Tree Number"
 align(ptab) <- 'llcccc'
 caption(ptab) <- "Variants remaining after filtering."
 label(ptab) <- "ptab"
@@ -230,7 +230,7 @@ Using the whole genome alignment (28 sequences, 39,870 nucleotides) we performed
 
 \begin{figure}[p]
 \centering
-\includegraphics[scale=0.08]{Beast_branchlenghts.jpg}
+\includegraphics[scale=0.5]{mtdna_alin.jpg}
 \caption[BEAST Coalescent tree]{Bayesian coalescent tree of the whole mtDNA genome of \emph{P.infestans} using \texttt{BEAST 1.8.0}. Values above branches represent branch lengths (tolopogy is cooncordant to the bifurcating model of a coalescent reconstruction). Branches are colored based on their posterior probability values (legend indicates color scheme).}
 \label{fig:BEAST}
 \end{figure}
@@ -243,7 +243,7 @@ To map the variants found in the mtDNA genome to the coalescent tree, we used \t
 
 
 
-\includepdf[pages={-}, nup=2x2]{All_traces.pdf}
+\includepdf[pages={-}, nup=2x2]{All_traces_2.pdf}
 
 
 \vspace{24pt}
