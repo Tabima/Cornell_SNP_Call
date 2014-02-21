@@ -151,7 +151,9 @@ Reads were mapped to the type IIa mitochondrial reference \href{http://www.ncbi.
 \subsection{Variant filtering}
 As a quality control step, the variant files were filtered by quality, read depth and mapping quality (Figures \ref{fig:plot_unfilter},\ref{fig:plot_filter}). For this we used an in-house R package called \href{https://github.com/knausb/vcfR}{vcfR}. Here, sequencing depth is cumulative over all samples.  Quality here is for each variant over all samples and ranges from 1-999.
 
-The genotype caller in Samtools assumes a diploid, bi-allelic model.  Because mitochondrial are assumed to be haploid we tried to filter out heterozygous calls.  Samples which included high quality heterozygote calls (p1362, p6096, p10650, p12204, p10127) were mostly from the Yoshida et al. \cite{yoshida2013correction} paper and were among the low sequencing depth samples they included.  Because these samples are not among the US lineages we're interested in, and because they are apparently of low sequencing depth, we omitted them for now.  However, the sample nl07434 was among the high sequencing depth samples from this paper and is perhaps noteworthy.  T30-4 was called as a heterozygote for one variant and is perplexinng.
+The genotype caller in Samtools assumes a diploid, bi-allelic model.  Because mitochondria are assumed to be haploid we tried to filter out heterozygous calls.  Samples which included high quality heterozygote calls (p1362, p6096, p10650, p12204, p10127) were mostly from the Yoshida et al. \cite{yoshida2013correction} paper and were among the low sequencing depth samples they included.  Because these samples are not among the US lineages we're interested in, and because they are apparently of low sequencing depth, we omitted them for now.  However, the sample nl07434 was among the high sequencing depth samples from this paper and is perhaps noteworthy.  T30-4 was called as a heterozygote for one variant and is perplexinng.
+
+In an attept to identify high quality variants we employed a filtering strategy.  Filtering of the variant panel was based on quality (QUAL=999), cumulative sequencing depth (1st quartile >= DP >= 3rd quartile) and mapping quality (1st quartile >= MQ >= 3rd quartile).  This resulted in 37 variants remaining after filtering (Table \ref{ptab}).  We have identified a fraction of these as being diagnostic for a small group of samples (Table \ref{table:DiagSNP}).
 
 The variants remaining after filtering were visualized as a linear chromosome in Figure \ref{fig:chromogc}.
 
@@ -196,7 +198,7 @@ The variants remaining after filtering were visualized as a linear chromosome in
 
 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Thu Feb 20 17:33:29 2014
+% Fri Feb 21 08:23:05 2014
 \begin{table}[ht]
 \centering
 \begin{tabular}{llcccc}
@@ -262,7 +264,7 @@ The variants remaining after filtering were visualized as a linear chromosome in
 
 %\section{SNPs after filtering}
 
-Filtering the variant panel based on quality (QUAL=999), cumulative sequencing depth (1st quartile >= DP >= 3rd quartile) and mapping quality (1st quartile >= MQ >= 3rd quartile) resulted in 37 variants (Table \ref{ptab}).  We have identified a fraction of these as being diagnostic for a small group of samples (Table \ref{table:DiagSNP}).
+
 
 %After filtering we proceeded to look at which of the SNP's were supported after the filtering (Table \ref{table:DiagSNP}).
 
@@ -271,14 +273,16 @@ Filtering the variant panel based on quality (QUAL=999), cumulative sequencing d
 \caption{Diagnostic SNP positions for the mtDNA genome after filtering.}
 \begin{tabular}{@{}lll@{}}
 \toprule
-Position & SNP & Diagnostic for       \\ \midrule
+Position & SNP & Diagnostic for       \\
+\midrule
 7857     & A/G & p10127, us11 and us1 \\
 8118     & T/G & us1                  \\
 20464    & T/C & p17777, us22 and us8 \\
 22711    & G/A & p17777, us22 and us8 \\
 26767    & A/G & p10127, us11 and us1 \\
 28783    & A/G & p10127, us11 and us1 \\
-36663    & T/C & us8                  \\ \bottomrule
+36663    & T/C & us8                  \\
+\bottomrule
 \end{tabular}
 \label{table:DiagSNP}
 \end{table}
@@ -295,8 +299,9 @@ Using the whole genome alignment (28 sequences, 39,870 nucleotides) we performed
 
 \begin{figure}[p]
 \centering
-\includegraphics[scale=0.5]{mtdna_alin.jpg}
-\caption[BEAST Coalescent tree]{Bayesian coalescent tree of the whole mtDNA genome of \emph{P.infestans} using \texttt{BEAST 1.8.0}. Values above branches represent branch lengths (tolopogy is cooncordant to the bifurcating model of a coalescent reconstruction). Branches are colored based on their posterior probability values (legend indicates color scheme).}
+%\includegraphics[scale=0.5]{mtdna_alin.jpg}
+\includegraphics[width=1.0\textwidth]{mtdna_alin.jpg}
+\caption[BEAST Coalescent tree]{Bayesian coalescent tree of the whole mtDNA genome of \emph{P. infestans} using \texttt{BEAST 1.8.0}. Values above branches represent branch lengths (topology is concordant to the bifurcating model of a coalescent reconstruction). Branches are colored based on their posterior probability values (legend indicates color scheme).}
 \label{fig:BEAST}
 \end{figure}
 
@@ -324,10 +329,15 @@ To map the variants found in the mtDNA genome to the coalescent tree, we used \t
 \end{alltt}
 \begin{verbatim}
 ## R version 3.0.2 (2013-09-25)
-## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## Platform: x86_64-pc-linux-gnu (64-bit)
 ## 
 ## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
@@ -337,7 +347,7 @@ To map the variants found in the mtDNA genome to the coalescent tree, we used \t
 ## 
 ## loaded via a namespace (and not attached):
 ## [1] ape_3.0-11      evaluate_0.5.1  formatR_0.10    grid_3.0.2     
-## [5] lattice_0.20-23 nlme_3.1-111    stringr_0.6.2   tools_3.0.2
+## [5] lattice_0.20-24 nlme_3.1-111    stringr_0.6.2   tools_3.0.2
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
