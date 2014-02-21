@@ -182,9 +182,9 @@ sum(pinf_mt@var.info$mask)
 #kable(head(iris))
 #
 library(xtable)
-ptab <- xtable(cbind(pinf_mt@vcf.fix[pinf_mt@var.info$mask,c(1,2,4,5)],1:sum(pinf_mt@var.info$mask)))
-colnames(ptab)[5] <- "Tree Number"
-align(ptab) <- 'llcccc'
+ptab <- xtable(cbind(pinf_mt@vcf.fix[pinf_mt@var.info$mask,c(1,2,4,5)]))
+#colnames(ptab)[5] <- "Tree Number"
+align(ptab) <- 'llccc'
 caption(ptab) <- "Variants remaining after filtering."
 label(ptab) <- "ptab"
 digits(ptab)[3] <- 0
@@ -205,18 +205,18 @@ chromoqc(pinf_mt)
 
 \begin{table}[h!]
 \centering
-\caption{Diagnostic SNP positions for the mtDNA genome after filtering.}
-\begin{tabular}{@{}lll@{}}
+\caption{Diagnostic SNP positions for the mtDNA genome after filtering. The tree number corresponds to the character legend on the tree figures}
+\begin{tabular}{@{}llll@{}}
 \toprule
-Position & SNP & Diagnostic for       \\
+Position & SNP & Diagnostic for & Tree Number      \\
 \midrule
-7857     & A/G & p10127, us11 and us1 \\
-8118     & T/G & us1                  \\
-20464    & T/C & p17777, us22 and us8 \\
-22711    & G/A & p17777, us22 and us8 \\
-26767    & A/G & p10127, us11 and us1 \\
-28783    & A/G & p10127, us11 and us1 \\
-36663    & T/C & us8                  \\
+7857     & A/G & p10127, us11 and us1 & 4\\
+8118     & T/G & us1                  & 5\\
+20464    & T/C & p17777, us22 and us8 & 15\\
+22711    & G/A & p17777, us22 and us8 & 17\\
+26767    & T/C & p10127, us11 and us1 & 24\\
+28783    & A/G & p10127, us11 and us1 & 26\\
+36663    & T/C & us8 & 33                  \\
 \bottomrule
 \end{tabular}
 \label{table:DiagSNP}
@@ -242,13 +242,13 @@ Using the whole genome alignment (28 sequences, 39,870 nucleotides) we performed
 
 \subsection{Mapping the SNP's in the BEAST tree}
 
-To map the variants found in the mtDNA genome to the coalescent tree, we used \texttt{Mesquite}. We did a removal of invariable regions and ancestral state reconstruction for all 37 SNPs using a parsimony reconstruction state (Figure \ref{fig:SNP_Trace}).
+To map the variants found in the mtDNA genome to the coalescent tree, we used \texttt{Mesquite}. We did a removal of invariable regions and ancestral state reconstruction for all 37 SNPs using a parsimony reconstruction state (see tree figures).
 
 \newpage
 
 
 
-\includepdf[pages={-}, nup=2x2]{All_traces_2.pdf}
+\includepdf[pages={5,6,16,18,25,27,34}, nup=2x2]{All_traces.pdf}
 
 
 \vspace{24pt}
