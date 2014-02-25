@@ -74,7 +74,7 @@ The sample includes data which was opportunistically gathered from previous publ
 
 \begin{itemize}
 
-\item The sample `T30-4' was the first sequenced genome and is considered the reference for nuclear work \cite{haas2009genome}.  This genome was assembled prior to high-throughput sequencing (i.e., Illumina and 454 technologies).  The data presented here are not the sequences used for the paper but are part of a project by \href{http://www.broadinstitute.org/annotation/genome/phytophthora_infestans/MultiHome.html}{The Broad} to resequence this individual using Illumina and 454 technologies.
+\item The sample `T30-4' was the first sequenced genome and is considered the reference for nuclear work \cite{haas2009genome}.  This genome was assembled prior to high-throughput sequencing (i.e., Illumina and 454 technologies).  The data presented here are not the sequences used for the paper but are part of a project by \href{http://www.broadinstitute.org/annotation/genome/phytophthora_infestans/MultiHome.html}{The Broad}\cite{broad_pinf} to resequence this individual using Illumina and Roche/454 technologies.
 
 \item Note that both the Yoshida and Martin papers included ancient DNA in their analyses \cite{yoshida2013correction, martin2013reconstructing}.  Here we have omitted those samples and focused on modern samples.
 
@@ -208,7 +208,7 @@ chromoqc(pinf_mt)
 \caption{Diagnostic SNP positions for the mtDNA genome after filtering. The tree number corresponds to the character legend on the tree figures}
 \begin{tabular}{@{}llll@{}}
 \toprule
-Position & SNP & Diagnostic for & Tree Number      \\
+Position & SNP & Diagnostic for & Character number      \\
 \midrule
 7857     & A/G & p10127, us11 and us1 & 4\\
 8118     & T/G & us1                  & 5\\
@@ -230,7 +230,7 @@ Position & SNP & Diagnostic for & Tree Number      \\
 In order to visualize how variants segregated among the samples, a phylogeny was inferred.  We then used ancestral state reconstruction to map the characters to the tree.  At this time we're not trying to say anything bold about phylogeny or character evolution.  We're simply using these tools to visualize how the variants segregate.
 
 \subsection{Phylogenetic reconstruction}
-Using the whole genome alignment (28 sequences, 39,870 nucleotides) we performed a whole-genome phylogeny using maximum likelihood (RAxML) and Bayesian inference (BEAST). We used RAxML using no partitions, 1000 bootstrap replicates, a \texttt{GTR+I+G} model of nucleotide evolution to obtain a bipartitioned tree with the boostrap values mapped to the branches. For BEAST, we specified \texttt{p7722} (\emph{P.mirabilis}) as the outgroup. We used a \texttt{HKY+G+I} model of nucleotide substitutions, a strict molecular clock, a constant population size prior, UPGMA starting tree and 10 million Markov chains. The best tree is shown in Figure \ref{fig:BEAST}.
+Using the whole genome alignment (28 sequences, 39,870 nucleotides) we performed a whole-genome phylogeny using maximum likelihood (RAxML) and Bayesian inference (BEAST). We used RAxML using no partitions, 1000 bootstrap replicates, a \texttt{GTR+I+G} model of nucleotide evolution to obtain a bipartitioned tree with the boostrap values mapped to the branches. For BEAST, we specified \texttt{p7722} (\emph{P. mirabilis}) as the outgroup. We used a \texttt{HKY+G+I} model of nucleotide substitutions, a strict molecular clock, a constant population size prior, UPGMA starting tree and 10 million Markov chains. The best tree is shown in Figure \ref{fig:BEAST}.
 
 \begin{figure}[p]
 \centering
@@ -242,7 +242,7 @@ Using the whole genome alignment (28 sequences, 39,870 nucleotides) we performed
 
 \subsection{Mapping the SNP's in the BEAST tree}
 
-To map the variants found in the mtDNA genome to the coalescent tree, we used \texttt{Mesquite}. We did a removal of invariable regions and ancestral state reconstruction for all 37 SNPs using a parsimony reconstruction state (see tree figures).
+To map the variants found in the mtDNA genome to the coalescent tree, we used \texttt{Mesquite}. We did a removal of invariable regions and ancestral state reconstruction for all 37 SNPs using a parsimony reconstruction state.  Select variants which we felt were diagnostic for a small number of lineages are presented as trees with mapped characters (see tree figures).
 
 \newpage
 

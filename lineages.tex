@@ -124,7 +124,7 @@ The sample includes data which was opportunistically gathered from previous publ
 
 \begin{itemize}
 
-\item The sample `T30-4' was the first sequenced genome and is considered the reference for nuclear work \cite{haas2009genome}.  This genome was assembled prior to high-throughput sequencing (i.e., Illumina and 454 technologies).  The data presented here are not the sequences used for the paper but are part of a project by \href{http://www.broadinstitute.org/annotation/genome/phytophthora_infestans/MultiHome.html}{The Broad} to resequence this individual using Illumina and 454 technologies.
+\item The sample `T30-4' was the first sequenced genome and is considered the reference for nuclear work \cite{haas2009genome}.  This genome was assembled prior to high-throughput sequencing (i.e., Illumina and 454 technologies).  The data presented here are not the sequences used for the paper but are part of a project by \href{http://www.broadinstitute.org/annotation/genome/phytophthora_infestans/MultiHome.html}{The Broad}\cite{broad_pinf} to resequence this individual using Illumina and Roche/454 technologies.
 
 \item Note that both the Yoshida and Martin papers included ancient DNA in their analyses \cite{yoshida2013correction, martin2013reconstructing}.  Here we have omitted those samples and focused on modern samples.
 
@@ -187,7 +187,6 @@ The variants remaining after filtering were visualized as a linear chromosome in
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
-## gt.m2sfs is commented out
 ## Before filtering:
 ## [1] 247
 ## After filtering:
@@ -198,7 +197,7 @@ The variants remaining after filtering were visualized as a linear chromosome in
 
 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Fri Feb 21 14:19:37 2014
+% Tue Feb 25 08:19:13 2014
 \begin{table}[ht]
 \centering
 \begin{tabular}{llccc}
@@ -273,7 +272,7 @@ The variants remaining after filtering were visualized as a linear chromosome in
 \caption{Diagnostic SNP positions for the mtDNA genome after filtering. The tree number corresponds to the character legend on the tree figures}
 \begin{tabular}{@{}llll@{}}
 \toprule
-Position & SNP & Diagnostic for & Tree Number      \\
+Position & SNP & Diagnostic for & Character number      \\
 \midrule
 7857     & A/G & p10127, us11 and us1 & 4\\
 8118     & T/G & us1                  & 5\\
@@ -295,7 +294,7 @@ Position & SNP & Diagnostic for & Tree Number      \\
 In order to visualize how variants segregated among the samples, a phylogeny was inferred.  We then used ancestral state reconstruction to map the characters to the tree.  At this time we're not trying to say anything bold about phylogeny or character evolution.  We're simply using these tools to visualize how the variants segregate.
 
 \subsection{Phylogenetic reconstruction}
-Using the whole genome alignment (28 sequences, 39,870 nucleotides) we performed a whole-genome phylogeny using maximum likelihood (RAxML) and Bayesian inference (BEAST). We used RAxML using no partitions, 1000 bootstrap replicates, a \texttt{GTR+I+G} model of nucleotide evolution to obtain a bipartitioned tree with the boostrap values mapped to the branches. For BEAST, we specified \texttt{p7722} (\emph{P.mirabilis}) as the outgroup. We used a \texttt{HKY+G+I} model of nucleotide substitutions, a strict molecular clock, a constant population size prior, UPGMA starting tree and 10 million Markov chains. The best tree is shown in Figure \ref{fig:BEAST}.
+Using the whole genome alignment (28 sequences, 39,870 nucleotides) we performed a whole-genome phylogeny using maximum likelihood (RAxML) and Bayesian inference (BEAST). We used RAxML using no partitions, 1000 bootstrap replicates, a \texttt{GTR+I+G} model of nucleotide evolution to obtain a bipartitioned tree with the boostrap values mapped to the branches. For BEAST, we specified \texttt{p7722} (\emph{P. mirabilis}) as the outgroup. We used a \texttt{HKY+G+I} model of nucleotide substitutions, a strict molecular clock, a constant population size prior, UPGMA starting tree and 10 million Markov chains. The best tree is shown in Figure \ref{fig:BEAST}.
 
 \begin{figure}[p]
 \centering
@@ -307,7 +306,7 @@ Using the whole genome alignment (28 sequences, 39,870 nucleotides) we performed
 
 \subsection{Mapping the SNP's in the BEAST tree}
 
-To map the variants found in the mtDNA genome to the coalescent tree, we used \texttt{Mesquite}. We did a removal of invariable regions and ancestral state reconstruction for all 37 SNPs using a parsimony reconstruction state (see tree figures).
+To map the variants found in the mtDNA genome to the coalescent tree, we used \texttt{Mesquite}. We did a removal of invariable regions and ancestral state reconstruction for all 37 SNPs using a parsimony reconstruction state.  Select variants which we felt were diagnostic for a small number of lineages are presented as trees with mapped characters (see tree figures).
 
 \newpage
 
@@ -329,10 +328,15 @@ To map the variants found in the mtDNA genome to the coalescent tree, we used \t
 \end{alltt}
 \begin{verbatim}
 ## R version 3.0.2 (2013-09-25)
-## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## Platform: x86_64-pc-linux-gnu (64-bit)
 ## 
 ## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
@@ -342,7 +346,7 @@ To map the variants found in the mtDNA genome to the coalescent tree, we used \t
 ## 
 ## loaded via a namespace (and not attached):
 ## [1] ape_3.0-11      evaluate_0.5.1  formatR_0.10    grid_3.0.2     
-## [5] lattice_0.20-24 nlme_3.1-113    stringr_0.6.2   tools_3.0.2
+## [5] lattice_0.20-24 nlme_3.1-111    stringr_0.6.2   tools_3.0.2
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
